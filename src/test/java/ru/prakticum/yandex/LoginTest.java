@@ -14,12 +14,12 @@ import static org.junit.Assert.assertTrue;
 
 public class LoginTest extends BaseTest {
 
-    ApiClient apiClient = new ApiClient();
-    String token;
+    private ApiClient apiClient = new ApiClient();
+    private String token;
 
-    String email = "Pupsen@yandex.ru";
-    String password = "qwerty";
-    String name = "Pupsen";
+    private String email = "Pupsen@yandex.ru";
+    private String password = "qwerty";
+    private String name = "Pupsen";
 
     @Before
     public void setUp() {

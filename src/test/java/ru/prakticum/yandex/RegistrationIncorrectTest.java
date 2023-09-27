@@ -10,9 +10,9 @@ import static org.junit.Assert.assertTrue;
 
 public class RegistrationIncorrectTest extends BaseTest {
 
-    String email = "Pupsen@yandex.ru";
-    String password = "123";
-    String name = "Pupsen";
+    private String email = "Pupsen@yandex.ru";
+    private String password = "123";
+    private String name = "Pupsen";
 
     @Test
     @DisplayName("Ошибка для некорректного пароля регистрации")

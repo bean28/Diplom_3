@@ -1,5 +1,6 @@
 package ru.prakticum.yandex.page;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
@@ -29,47 +30,58 @@ public class MainPage extends BasePage {
                 .until(ExpectedConditions.invisibilityOf(driver.findElement(loading)));
     }
 
+    @Step("Клик по кнопке 'Личный кабинет'")
     public void clickPersonalAccount() {
         clickOnElement(personalAccount);
         waitLoading();
     }
 
+    @Step("Клик по кнопке 'Войти в аккаунт'")
     public void clickSignIn() {
         clickOnElement(signIn);
     }
 
+    @Step("Клик по кнопке 'Конструктор'")
     public void clickConstructor() {
         clickOnElement(constructor);
     }
 
+    @Step("Клик по вкладке 'Булки'")
     public void clickBuns() {
         clickOnElement(buns);
     }
 
+    @Step("Булки отображаются")
     public Boolean firstBunIsDisplayed() {
         return driver.findElement(firstBun).isDisplayed();
     }
 
+    @Step("Клик по вкладке 'Соусы'")
     public void clickSauces() {
         clickOnElement(sauces);
     }
 
+    @Step("Соусы отображаются")
     public Boolean firstSauceIsDisplayed() {
         return driver.findElement(firstSauce).isDisplayed();
     }
 
+    @Step("Клик по вкладке 'Нвчинки'")
     public void clickFillings() {
         clickOnElement(fillings);
     }
 
+    @Step("Нвчинки отображаются")
     public Boolean firstFillingIsDisplayed() {
         return driver.findElement(firstFilling).isDisplayed();
     }
 
+    @Step("Клик по логотипу")
     public void clickLogo() {
         clickOnElement(logo);
     }
 
+    @Step("Кнопка 'Оформить заказ' отображается")
     public Boolean createOrderButtonIsDisplayed() {
         try {
             new WebDriverWait(driver, 5)
@@ -80,6 +92,7 @@ public class MainPage extends BasePage {
         }
     }
 
+    @Step("Кнопка 'Войти в аккаунт' отображается")
     public Boolean signInButtonIsDisplayed() {
         try {
             new WebDriverWait(driver, 5)

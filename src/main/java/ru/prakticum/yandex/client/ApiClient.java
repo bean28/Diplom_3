@@ -1,5 +1,6 @@
 package ru.prakticum.yandex.client;
 
+import io.qameta.allure.Step;
 import io.restassured.response.Response;
 
 import static io.restassured.RestAssured.given;
@@ -12,6 +13,7 @@ public class ApiClient {
 
     private static final String DELETE = "/api/auth/user";
 
+    @Step("Создание пользователя")
     public Response createUser(Object body) {
         return given()
                 .header("Content-type", "application/json")
@@ -21,6 +23,7 @@ public class ApiClient {
                 .post(CREATE);
     }
 
+    @Step("Авторизация пользователя")
     public Response loginUser(Object body) {
         return given()
                 .header("Content-type", "application/json")
@@ -30,6 +33,7 @@ public class ApiClient {
                 .post(LOGIN);
     }
 
+    @Step("Удаление пользователя")
     public Response deleteUser(String token) {
         return given()
                 .header("Content-type", "application/json")

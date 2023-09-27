@@ -16,9 +16,9 @@ import static org.junit.Assert.assertTrue;
 
 public class RegistrationTest extends BaseTest {
 
-    String email = "Pupsen@yandex.ru";
-    String password = "qwerty";
-    String name = "Pupsen";
+    private String email = "Pupsen@yandex.ru";
+    private String password = "qwerty";
+    private String name = "Pupsen";
 
     @Test
     @DisplayName("Успешная регистрация")
